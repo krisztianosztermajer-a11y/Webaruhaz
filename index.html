@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Sportswear & Gear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container navbar">
+        <a class="logo" href="#"><img src="images/logo.png" alt="RedStore"></a>
+        <nav id="MenuItems">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+        <button class="icon-btn" id="cartBtn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+            <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="icon-btn menu-icon" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="MenuItems">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+    </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="drawer-head">
+        <h2 id="cartTitle">Your cart</h2>
+        <button class="icon-btn" id="closeCart" type="button" aria-label="Close cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="drawer-foot">
+        <div class="total-row"><span>Subtotal</span><strong id="cartTotal">$0.00</strong></div>
+        <p class="cart-note" id="cartNote" hidden>Checkout is not connected yet. Payment would start here.</p>
+        <button class="btn btn-block" id="checkout" type="button">Checkout</button>
+        <button class="link-btn" id="clearCart" type="button">Clear cart</button>
+    </div>
+</aside>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <div>
+                <h1>Give your workout a new style</h1>
+                <p>Success isn't always about greatness. It's about consistency. Consistent hard work gains success. Greatness will come.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn">Explore now</a>
+                    <a href="#offer" class="btn btn-ghost">See the offer</a>
+                </div>
+            </div>
+            <div class="hero-img"><img src="images/image1.png" alt="Athlete wearing RedStore sportswear"></div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container categories">
+            <a class="category" href="#products"><img src="images/category-1.jpg" alt="Orange knit sneakers"></a>
+            <a class="category" href="#products"><img src="images/category-2.jpg" alt="White striped sneaker"></a>
+            <a class="category" href="#products"><img src="images/category-3.jpg" alt="Woman in a white hoodie with a sports watch"></a>
+        </div>
+    </section>
+
+    <section class="container" id="products">
+        <div class="section-head"><h2>Featured products</h2><a href="#">View all</a></div>
+        <div class="grid" id="featured"></div>
+
+        <div class="section-head"><h2>Latest products</h2><a href="#">View all</a></div>
+        <div class="grid" id="latest"></div>
+    </section>
+
+    <section class="offer section" id="offer">
+        <div class="container">
+            <img src="images/exclusive.png" alt="Smart Band 4">
+            <div>
+                <p class="kicker">Exclusively available on RedStore</p>
+                <h2>Smart Band 4</h2>
+                <p class="text">The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</p>
+                <a href="#" class="btn">Buy now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonial-section">
+        <div class="container">
+            <div class="section-head"><h2>What our customers say</h2></div>
+            <div class="testimonials">
+                <article class="review">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus, sapiente provident cupiditate quasi dolorum eveniet reiciendis.</blockquote>
+                    <span class="stars" style="--r:4" role="img" aria-label="4 out of 5 stars">★★★★★</span>
+                    <img class="avatar" src="images/user-1.png" alt="">
+                    <h3>Sean Parker</h3>
+                </article>
+                <article class="review">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus, sapiente provident cupiditate quasi dolorum eveniet reiciendis.</blockquote>
+                    <span class="stars" style="--r:4" role="img" aria-label="4 out of 5 stars">★★★★★</span>
+                    <img class="avatar" src="images/user-2.png" alt="">
+                    <h3>Mike Smith</h3>
+                </article>
+                <article class="review">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus, sapiente provident cupiditate quasi dolorum eveniet reiciendis.</blockquote>
+                    <span class="stars" style="--r:4" role="img" aria-label="4 out of 5 stars">★★★★★</span>
+                    <img class="avatar" src="images/user-3.png" alt="">
+                    <h3>Mabel Joe</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="container brands">
+        <img src="images/logo-godrej.png" alt="Godrej">
+        <img src="images/logo-oppo.png" alt="Oppo">
+        <img src="images/logo-coca-cola.png" alt="Coca-Cola">
+        <img src="images/logo-paypal.png" alt="PayPal">
+        <img src="images/logo-philips.png" alt="Philips">
+    </div>
+</main>
+
+<footer class="site-footer" id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Download our app</h3>
+                <p>Download the app for Android and iOS mobile phones.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="Get it on Google Play">
+                    <img src="images/app-store.png" alt="Download on the App Store">
+                </div>
+            </div>
+            <div>
+                <img class="footer-logo" src="images/logo-white.png" alt="RedStore">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cum dignissimos minus, voluptatibus recusandae qui corrupti sed perspiciatis quo voluptates.</p>
+            </div>
+            <div>
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">Blog posts</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Join affiliate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">Copyright 2020 - Easy Tutorials. <a href="https://www.freepik.com/free-photos-vectors/banner">Banner psd created by freepik</a>. Product images: myntra.com</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu
+    const nav = document.getElementById('MenuItems');
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', open);
+    });
+
+    // Products: add or edit items here (image file names are in the images folder)
+    const featured = [
+        { img: 'product-1.jpg', name: 'Maroon Graphic T-Shirt', price: '$50.00', r: 4 },
+        { img: 'product-2.jpg', name: 'Black Running Shoes', price: '$65.00', r: 3.5 },
+        { img: 'product-3.jpg', name: 'Grey Zip-Pocket Joggers', price: '$45.00', r: 4.5 },
+        { img: 'product-4.jpg', name: 'Navy Polo T-Shirt', price: '$40.00', r: 4 }
+    ];
+    const latest = [
+        { img: 'product-5.jpg', name: 'Grey High-Top Sneakers', price: '$70.00', r: 4 },
+        { img: 'product-6.jpg', name: 'Black Chevron T-Shirt', price: '$35.00', r: 3.5 },
+        { img: 'product-7.jpg', name: 'Sport Socks, 3 Pack', price: '$15.00', r: 4.5 },
+        { img: 'product-8.jpg', name: 'Black Steel Watch', price: '$120.00', r: 4 },
+        { img: 'product-9.jpg', name: 'Leather Strap Watch', price: '$85.00', r: 4 },
+        { img: 'product-10.jpg', name: 'Black & Red Trail Shoes', price: '$80.00', r: 4.5 },
+        { img: 'product-11.jpg', name: 'Grey Slip-On Trainers', price: '$55.00', r: 4.5 },
+        { img: 'product-12.jpg', name: 'Black Fleece Joggers', price: '$48.00', r: 4 }
+    ];
+    function stars(r) {
+        return `<span class="stars" style="--r:${r}" role="img" aria-label="${r} out of 5 stars">★★★★★</span>`;
+    }
+    function render(id, list) {
+        document.getElementById(id).innerHTML = list.map(p => `
+            <article class="product">
+                <div class="product-img">
+                    <img src="images/${p.img}" alt="${p.name}" loading="lazy">
+                    <button class="add" type="button" data-id="${p.img}">Add to cart</button>
+                </div>
+                <h4>${p.name}</h4>
+                <div class="meta">${stars(p.r)}<span class="price">${p.price}</span></div>
+            </article>`).join('');
+    }
+    render('featured', featured);
+    render('latest', latest);
+
+    // Cart
+    const all = [...featured, ...latest];
+    const KEY = 'redstore-cart';
+    let cart = [];
+    try { cart = JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { cart = []; }
+    cart = cart.filter(i => all.some(p => p.img === i.id) && i.qty > 0);
+
+    const $ = id => document.getElementById(id);
+    const money = n => '$' + n.toFixed(2);
+    const priceOf = p => parseFloat(p.price.replace('$', ''));
+    const find = id => all.find(p => p.img === id);
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch (e) {} };
+
+    function renderCart() {
+        const qty = cart.reduce((s, i) => s + i.qty, 0);
+        $('cartCount').textContent = qty;
+        $('cartCount').hidden = qty === 0;
+        $('cartList').innerHTML = cart.length ? cart.map(i => {
+            const p = find(i.id);
+            return `<li class="cart-item">
+                <img src="images/${p.img}" alt="${p.name}">
+                <div>
+                    <h4>${p.name}</h4>
+                    <span class="price">${money(priceOf(p))}</span>
+                    <div class="qty">
+                        <button type="button" data-act="dec" data-id="${i.id}" aria-label="Decrease quantity">−</button>
+                        <span>${i.qty}</span>
+                        <button type="button" data-act="inc" data-id="${i.id}" aria-label="Increase quantity">+</button>
+                    </div>
+                </div>
+                <button class="remove" type="button" data-act="remove" data-id="${i.id}" aria-label="Remove ${p.name}">Remove</button>
+            </li>`;
+        }).join('') : '<li class="cart-empty">Your cart is empty.<br>Add something from the shop.</li>';
+        $('cartTotal').textContent = money(cart.reduce((s, i) => s + i.qty * priceOf(find(i.id)), 0));
+        $('checkout').disabled = $('clearCart').disabled = cart.length === 0;
+        $('cartNote').hidden = true;
+        save();
+    }
+
+    function change(id, delta) {
+        const item = cart.find(i => i.id === id);
+        if (!item) { if (delta > 0) cart.push({ id, qty: 1 }); }
+        else { item.qty += delta; if (item.qty <= 0) cart = cart.filter(i => i.id !== id); }
+        renderCart();
+    }
+
+    let lastFocus;
+    function openCart() {
+        lastFocus = document.activeElement;
+        $('drawer').classList.add('open'); $('overlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+        $('closeCart').focus();
+    }
+    function closeCart() {
+        $('drawer').classList.remove('open'); $('overlay').classList.remove('open');
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+    }
+
+    document.addEventListener('click', e => {
+        const add = e.target.closest('.add');
+        if (add) {
+            change(add.dataset.id, 1);
+            add.textContent = 'Added to cart';
+            setTimeout(() => add.textContent = 'Add to cart', 1200);
+            return;
+        }
+        const act = e.target.closest('[data-act]');
+        if (act) change(act.dataset.id, act.dataset.act === 'inc' ? 1 : act.dataset.act === 'dec' ? -1 : -Infinity);
+    });
+    $('cartBtn').addEventListener('click', openCart);
+    $('closeCart').addEventListener('click', closeCart);
+    $('overlay').addEventListener('click', closeCart);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+    $('clearCart').addEventListener('click', () => { cart = []; renderCart(); });
+    $('checkout').addEventListener('click', () => { $('cartNote').hidden = false; });
+    renderCart();
+</script>
+</body>
+</html>
